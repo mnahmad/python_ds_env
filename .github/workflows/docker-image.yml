@@ -16,6 +16,9 @@ jobs:
     
     - name: checkout code from current repo main/master branch
       uses: actions/checkout@v3
+    
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
 
     # use buildx to speed up things
     - name: Set up Docker Buildx
