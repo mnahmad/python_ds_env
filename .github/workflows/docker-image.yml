@@ -13,12 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
-    - name: checkout code from current repo main/master branch
-      uses: actions/checkout@v3
-    
+
+    # setup QEMU
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
+      
+    - name: checkout code from current repo main/master branch
+      uses: actions/checkout@v3
+      
+
 
     # use buildx to speed up things
     - name: Set up Docker Buildx
