@@ -1,13 +1,13 @@
 ## build this image based on U 22.04
 FROM ubuntu:22.04
 
-LABEL maintainer="Muhammad <mnabiahmad@gmail.copm>"
+LABEL maintainer="Muhammad <mnabiahmad@gmail.com>"
 
 ## Set Enviorment variables
 ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
 
 ## Update package manager
-# RUN apt-get udapte --fix-missing
+RUN apt-get udapte --fix-missing
 
 
 ## Install packages
