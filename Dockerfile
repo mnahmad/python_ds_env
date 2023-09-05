@@ -7,7 +7,8 @@ LABEL maintainer="Muhammad <mnabiahmad@gmail.copm>"
 ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
 
 ## Update package manager
-RUN apt-get udapte --fix-missing
+# RUN apt-get udapte --fix-missing
+
 
 ## Install packages
 RUN apt-get install -y wget \ 
