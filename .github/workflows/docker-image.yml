@@ -22,7 +22,16 @@ jobs:
       uses: actions/checkout@v3
       
 
-
+    - name: Set image meta attributes
+      id: meta
+      uses: docker/metadata-action@v3
+      with:
+        images: ${{ secrets.REGISTRY_USER }}/python_ds_env
+        # generate Docker tags based on the following events/attributes
+        tags: |
+          type=sha
+          latest
+          
     # use buildx to speed up things
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -38,9 +47,16 @@ jobs:
     - name: build and push to docker
       uses: docker/build-push-action@v4
       with:
-        image: mnabiahmad/python_ds_env
+        #image: mnabiahmad/python_ds_env
+        context: .
+        push: true
+        #file: ./${{ secrets.DOCKERFILE }}
+        tags: ${{ steps.meta.outputs.tags }}
         registry: ${{ secrets.REGISTRY_URL }}
         username: ${{ secrets.REGISTRY_USER }}
         password: ${{ secrets.REGISTRY_TOKEN }}
+
+    - name: Log out on dockerhub registry
+      run: docker logout
 
     
