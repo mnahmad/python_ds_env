@@ -36,7 +36,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         image: mnabiahmad/python_ds_env
-        registry: ${{ secrets.REGISTRY_URL }}
+        registry: ${{ secrets.REGISTRY_URL }
         username: ${{ secrets.REGISTRY_USER }}
         password: ${{ secrets.REGISTRY_TOKEN }}
 

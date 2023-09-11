@@ -1,13 +1,16 @@
 ## build this image based on U 22.04
-FROM ubuntu:22.04
+FROM ubuntu:latest
 
 LABEL maintainer="Muhammad <mnabiahmad@gmail.com>"
 
 ## Set Enviorment variables
-ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
+#ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
 
 ## Update package manager
-RUN apt-get udapte --fix-missing
+RUN apt-get udapte \
+&& apt-get upgrade
+
+#--fix-missing
 
 
 ## Install packages
@@ -32,6 +35,9 @@ RUN apt-get install -y wget \
 ## Install gdal 
 RUN apt install -y gdal-bin python-gdal python3-gdal
 
+
+## clean 
+RUN apt-get clean
 
 ## Install python pkgs
 RUN pip3 isntall --upgrade pip
