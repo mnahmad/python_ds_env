@@ -7,7 +7,7 @@ LABEL maintainer="Muhammad <mnabiahmad@gmail.com>"
 #ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
 
 ## Update package manager
-RUN apt-get udapte -y 
+RUN apt-get udapte
 #&& 
 RUN apt-get upgrade
 
