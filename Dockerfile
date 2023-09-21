@@ -30,7 +30,6 @@ VOLUME /ds
 
 WORKDIR /ds
 
-CMD [ "/bin/bash" ] 
 
 
 
