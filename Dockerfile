@@ -30,7 +30,9 @@ RUN apt-get install -y llvm
 ## llvm: crossplatoform C, C++ compiler
 
 ## Install gdal 
-RUN apt install -y gdal-bin python-gdal python3-gdal
+RUN apt install -y gdal-bin 
+#RUN apt install -y python-gdal 
+RUN apt install -y python3-gdal
 
 
 ## clean 
