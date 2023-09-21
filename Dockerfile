@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 
+LABEL maintainer="Muhammad Ahmad <mnabiahmad@gmail.com>"
 
 ## Set Enviorment variables
 #ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
@@ -31,16 +32,21 @@ RUN apt-get install -y llvm
 
 ## Install gdal 
 RUN apt install -y gdal-bin 
+## added by repo owner
+RUN apt-get install libgdal-dev
 #RUN apt install -y python-gdal 
 RUN apt install -y python3-gdal
+
 
 
 ## clean 
 RUN apt-get clean
 
 ## Install python pkgs
-RUN pip3 isntall --upgrade pip
-RUN pip3 install numpy scipy geopandas psycogp2 sqlalchmey networkx osmnx
+#RUN pip3 isntall --upgrade pip
+RUN pip isntall --upgrade pip
+#RUN pip3 install numpy scipy geopandas psycogp2 sqlalchmey networkx osmnx
+RUN pip install numpy scipy geopandas psycogp2 sqlalchmey networkx osmnx
 
 ## Folder/file setup
 RUN mkdir ds
