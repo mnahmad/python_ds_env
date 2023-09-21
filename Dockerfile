@@ -19,7 +19,7 @@ RUN apt-get install -y curl
 RUN apt-get install -y git-core 
 RUN apt-get install -y pkg-config 
 RUN apt-get install -y python3-dev 
-RUN apt-get install -y python3=pip 
+RUN apt-get install -y python3-pip 
 RUN apt-get install -y python3-setuptools 
 RUN apt-get install -y python3-virtualenv 
 RUN apt-get install -y unzip 
