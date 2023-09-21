@@ -46,7 +46,13 @@ RUN apt-get clean
 ## Install python pkgs
 RUN pip3 install --upgrade pip
 #RUN pip install --upgrade pip
-RUN pip3 install numpy scipy geopandas psycogp2 sqlalchmey networkx osmnx
+RUN pip3 install numpy 
+RUN pip3 install scipy 
+RUN pip3 install geopandas 
+RUN pip3 install psycogp2 
+RUN pip3 install sqlalchmey 
+RUN pip3 install networkx 
+RUN pip3 install osmnx
 #RUN pip install numpy scipy geopandas psycogp2 sqlalchmey networkx osmnx
 
 ## Folder/file setup
