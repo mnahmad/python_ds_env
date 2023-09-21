@@ -5,7 +5,9 @@ FROM ubuntu:latest
 ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
 
 ## Update package manager
-RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certicates build-essential curl git-core pkg-config python3-dev python3=pip python3-setuptools python3-virtualenv unzip software-properties-common llvm  
+RUN apt-get update && upgrade
+
+RUN apt-get install -y wget bzip2 ca-certicates build-essential curl git-core pkg-config python3-dev python3=pip python3-setuptools python3-virtualenv unzip software-properties-common llvm  
              
 ## Package details
 ## llvm: crossplatoform C, C++ compiler
