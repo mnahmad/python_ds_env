@@ -8,6 +8,7 @@ LABEL maintainer="Muhammad <mnabiahmad@gmail.com>"
 
 ## Update package manager
 RUN apt-get udapte
+RUN apt-get update
 #&& 
 RUN apt-get upgrade
 

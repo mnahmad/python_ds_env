@@ -1,3 +1,4 @@
+![example workflow](https://github.com/mnahmad/python_ds_env/actions/workflows/docker-image.yml/badge.svg)
 # python_ds_env
 Python data science docker based environment 
 
