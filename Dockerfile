@@ -1,7 +1,5 @@
-## build this image based on U 22.04
 FROM ubuntu:latest
-
-LABEL maintainer="Muhammad <mnabiahmad@gmail.com>"
+ENV DEBIAN_FRONTEND=noninteractive
 
 ## Set Enviorment variables
 #ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
