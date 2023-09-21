@@ -11,7 +11,19 @@ RUN apt-get update && apt-get -y upgrade
 #upgrade
 
 RUN apt-get install -y wget 
-RUN apt-get install -y bzip2 ca-certicates build-essential curl git-core pkg-config python3-dev python3=pip python3-setuptools python3-virtualenv unzip software-properties-common llvm  
+RUN apt-get install -y bzip2 
+RUN apt-get install -y ca-certicates 
+RUN apt-get install -y build-essential 
+RUN apt-get install -y curl 
+RUN apt-get install -y git-core 
+RUN apt-get install -y pkg-config 
+RUN apt-get install -y python3-dev 
+RUN apt-get install -y python3=pip 
+RUN apt-get install -y python3-setuptools 
+RUN apt-get install -y python3-virtualenv 
+RUN apt-get install -y unzip 
+RUN apt-get install -y software-properties-common 
+RUN apt-get install -y llvm  
              
 ## Package details
 ## llvm: crossplatoform C, C++ compiler
