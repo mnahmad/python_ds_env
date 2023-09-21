@@ -7,29 +7,7 @@ LABEL maintainer="Muhammad <mnabiahmad@gmail.com>"
 #ENV LANG=C.UTF-8 LC_ALL=C>UTF-8
 
 ## Update package manager
-RUN apt-get udapte
-RUN apt-get update
-#&& 
-RUN apt-get upgrade
-
-#--fix-missing
-
-
-## Install packages
-RUN apt-get install -y wget \ 
-                    bzip2 \
-                    ca-certicates \ 
-                    build-essential \
-                    curl \
-                    git-core \
-                    pkg-config \
-                    python3-dev \
-                    python3=pip \
-                    python3-setuptools \
-                    python3-virtualenv \
-                    unzip \
-                    software-properties-common \
-                    llvm  
+RUN apt-get udapte && apt-get install -y --no-install-recommends wget bzip2 ca-certicates build-essential curl git-core pkg-config python3-dev python3=pip python3-setuptools python3-virtualenv unzip software-properties-common llvm  
                     
 ## Package details
 ## llvm: crossplatoform C, C++ compiler
