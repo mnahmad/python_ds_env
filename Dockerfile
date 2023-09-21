@@ -12,7 +12,8 @@ RUN apt-get update && apt-get -y upgrade
 
 RUN apt-get install -y wget 
 RUN apt-get install -y bzip2 
-RUN apt-get install -y ca-certicates 
+# https://ubuntu.com/server/docs/security-trust-store
+RUN apt-get install -y ca-certificates 
 RUN apt-get install -y build-essential 
 RUN apt-get install -y curl 
 RUN apt-get install -y git-core 
