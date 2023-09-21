@@ -33,6 +33,7 @@ RUN apt-get install -y llvm
 ## Install gdal 
 RUN apt install -y gdal-bin 
 ## added by repo owner
+RUN add-apt-repository ppa:ubuntugis/ppa
 RUN apt-get install libgdal-dev
 #RUN apt install -y python-gdal 
 RUN apt install -y python3-gdal
