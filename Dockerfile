@@ -9,7 +9,6 @@ LABEL maintainer="Muhammad Ahmad <mnabiahmad@gmail.com>"
 #RUN apt-get update
 RUN apt-get update && apt-get -y upgrade
 
-#upgrade
 
 RUN apt-get install -y wget 
 RUN apt-get install -y bzip2 
@@ -25,10 +24,8 @@ RUN apt-get install -y python3-setuptools
 RUN apt-get install -y python3-virtualenv 
 RUN apt-get install -y unzip 
 RUN apt-get install -y software-properties-common 
-RUN apt-get install -y llvm  
-             
-## Package details
-## llvm: crossplatoform C, C++ compiler
+RUN apt-get install -y llvm  # llvm: crossplatoform C, C++ compiler
+
 
 ## Install gdal 
 RUN apt install -y gdal-bin 
@@ -45,7 +42,8 @@ RUN apt install -y python3-gdal
 RUN apt-get clean
 
 ## Install python pkgs
-RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade pip 
+
 #RUN pip install --upgrade pip
 RUN pip3 install numpy 
 RUN pip3 install scipy 
@@ -61,8 +59,12 @@ RUN pip3 install osmnx
 #RUN pip install numpy scipy geopandas psycogp2 sqlalchmey networkx osmnx
 
 
-RUN pip install jupyter 
-#insall ipkernal to run jyper 
+RUN pip3 install jupyter 
+# TO run jupyter code, we need ipython and ipythonkernal 
+RUN pip3 install ipython ipykernel
+
+
+
 
 ## Folder/file setup
 RUN mkdir ds
